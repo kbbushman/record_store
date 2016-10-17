@@ -1,0 +1,9 @@
+title: <%= @record.title %> <br />
+artist: <%= @record.artist %> <br />
+year: <%= @record.year %><br />
+
+<!-- BAD THING -->
+<!-- <img src="<%= @record.cover_art %>"> -->
+
+<!-- IMAGE HELPER TAG -->
+<%= image_tag @record.cover_art %>
