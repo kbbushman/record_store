@@ -6,11 +6,11 @@
 
 		<%= link_to (image_tag record.cover_art), record_path(record) %><br />
 
-		<%= link_to "Edit Record", edit_record_path(record) %><br />
+		<%= button_to "Delete Record", record, method: "delete", class: "delete-record" %>
 
-		<%= button_to "Delete Record", record, method: "delete" %><br />
+		<%= link_to "Edit Record", edit_record_path(record), class: "edit-record" %><br />
 
-		Title: <%= link_to record.title, record_path(record) %><br />
+		<span class="record-title">Title: <%= record.title %></span>
 
 		Artist: <%= record.artist %><br />
 
