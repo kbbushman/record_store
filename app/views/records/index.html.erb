@@ -1,15 +1,21 @@
+<h1>Records List:</h1>
 
 <% for record in @records %>
-<li>
-<!--
-	<a href="records/<%= record.id %>">
-		<%= record.title %>
-	</a>
 
--->
+	<li>
 
-	<%= link_to record.title, record %>
+		<%= link_to (image_tag record.cover_art), record_path(record) %><br />
 
-</li>
+		<%= link_to "Edit Record", edit_record_path(record) %><br />
+
+		<%= button_to "Delete Record", record, method: "delete" %><br />
+
+		Title: <%= link_to record.title, record_path(record) %><br />
+
+		Artist: <%= record.artist %><br />
+
+		<hr>
+
+	</li>
 
 <% end %>
